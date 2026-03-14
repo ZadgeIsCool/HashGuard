@@ -1,0 +1,55 @@
+<Window x:Class="HashGuard.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About HashGuard"
+        Height="360" Width="480"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,16">
+            <TextBlock Text="🛡️ HashGuard" FontSize="28" FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Foreground="{DynamicResource PrimaryTextBrush}"/>
+            <TextBlock Text="File Integrity Verification Tool"
+                       FontSize="14" HorizontalAlignment="Center"
+                       Foreground="{DynamicResource SecondaryTextBrush}"/>
+        </StackPanel>
+
+        <!-- Version Info -->
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center"
+                   Foreground="{DynamicResource SecondaryTextBrush}"
+                   Margin="0,0,0,16">
+            <Run Text="Version 1.0.0" FontWeight="SemiBold"/>
+            <LineBreak/>
+            <Run Text="Built with .NET 8.0 and WPF"/>
+        </TextBlock>
+
+        <!-- Description -->
+        <TextBlock Grid.Row="2" TextWrapping="Wrap" TextAlignment="Center"
+                   Foreground="{DynamicResource PrimaryTextBrush}"
+                   Margin="0,0,0,16">
+            HashGuard is a free, open-source tool for verifying file integrity
+            using cryptographic hash functions. It helps security researchers,
+            system administrators, and everyday users confirm that files have
+            not been tampered with or corrupted.
+            <LineBreak/><LineBreak/>
+            <Run Text="Licensed under the MIT License." FontStyle="Italic"/>
+            <LineBreak/>
+            <Run Text="© 2026 HashGuard Contributors" FontStyle="Italic"/>
+        </TextBlock>
+
+        <!-- Close Button -->
+        <Button Grid.Row="3" Content="Close" Click="BtnClose_Click"
+                HorizontalAlignment="Center"
+                Padding="32,8" FontSize="14"/>
+    </Grid>
+</Window>
