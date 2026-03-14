@@ -34,6 +34,12 @@ When you download software, firmware, or any important file, how do you know it 
 
 ---
 
+## Screenshots
+
+![HashGuard Main Interface](docs/screenshots/main-interface.png)
+
+---
+
 ## Quick Start
 
 ### Download
